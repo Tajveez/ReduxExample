@@ -26,8 +26,10 @@ class PostForm extends Component {
     };
 
     this.props.newPost(post);
-    // this.state.title = "";
-    // this.state.body = "";
+    this.setState({
+      title: "",
+      body: "",
+    });
   }
 
   render() {
@@ -44,8 +46,9 @@ class PostForm extends Component {
               placeholder="Enter Post Title"
             />
           </div>
+          <br />
           <div>
-            <input
+            <textarea
               type="text"
               value={this.state.body}
               onChange={this.onChange}
